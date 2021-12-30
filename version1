@@ -1,0 +1,141 @@
+from turtle import *
+from tkinter import *
+from random import *
+master=Tk()
+master.geometry("600x250")
+master.config(bg="#FF92A5")
+def model1():
+   master.destroy()
+   root=Turtle()
+   title("WOW!!! Here is the wonderful magic")
+   root.speed(30)
+   root.color("pink")
+   for i in range(50):
+      root.circle(75)
+      root.lt(10)
+   done()
+
+   
+def model2():
+   master.destroy()
+   root=Turtle()
+   title("WOW!!! Here is the wonderful magic")
+   root.speed(30)
+   root.color("#FF3659","#c6d7eb")
+   for i in range(50):
+      root.fd(200)
+      root.begin_fill()
+      root.circle(10)
+      root.end_fill()
+      root.lt(130)
+   done()
+
+   
+def model3():
+   master.destroy()
+   root=Turtle()
+   title("WOW!!! Here is the wonderful magic")
+   root.speed(30)
+   root.color("pink")
+   for i in range(170):
+      root.circle(i)
+      root.lt(90)
+      root.penup()
+      root.fd(3*i)
+      root.pendown()
+   done()
+
+   
+def model4():
+   master.destroy()
+   root=Turtle()
+   title("WOW!!! Here is the wonderful magic")
+   root.speed(30)
+   for i in range(25):
+      root.color("skyblue")
+      root.lt(-60)
+      root.fd(50)
+      root.color("pink")
+      root.lt(-90)
+      root.backward(100)
+   done()
+
+   
+def model5():
+   master.destroy()
+   root=Turtle()
+   title("WOW!!! Here is the wonderful magic")
+   root.speed(30)
+   root.color("cyan")
+   for i in range(200):
+    root.rt(i)
+    root.fd(i)
+    root.circle(i)
+   done()
+
+    
+def model6():
+   master.destroy()
+   root=Turtle()
+   title("WOW!!! Here is the wonderful magic")
+   root.speed(30)
+   root.color("#e52165","#c6d7eb")
+   root.begin_fill()
+   for i in range(100):
+       root.rt(i%10)
+       root.fd(1)
+       root.circle(75)
+   root.end_fill()
+   done()
+
+
+def model7():
+   master.destroy()
+   root=Turtle()
+   title("WOW!!! Here is the wonderful magic")
+   root.speed(30)
+   root.color("#e52165")
+   for i in range(200):
+       root.rt(i)
+       root.fd(i)   
+   done()
+
+
+def model8():
+   master.destroy()
+   root=Turtle()
+   root.color("#8F00FF")
+   root.speed(30)
+   for i in range(100):
+      root.lt(i%10)
+      root.circle(i%10+50)
+   done()
+
+
+def model9():
+   master.destroy()
+   root=Turtle()
+   root.color("#65D4EE")
+   root.speed(30)
+   for i in range(100):
+      root.circle(50)
+      root.lt(i+i%10)
+   done()
+
+
+def model10():
+   master.destroy()
+   root=Turtle()
+   root.speed(30)
+   root.color("#0014a8")
+   for i in range(300):
+      root.lt(50)
+      root.fd(i)
+   done()
+
+designs=(model1,model2,model3,model4,model5,model6,model7,model8,model9,model10)
+ch=randint(0,9)
+Label(master,text="Let me show you some magic",font=("TimesNewRoman",25,"italic"),bg="#FF92A5").pack(pady=50)
+b=Button(master,text="click here for magic",font=("TimesNewRoman",25,"italic"),bg="#C6D8D5",command=designs[ch])
+b.pack()
+mainloop()
